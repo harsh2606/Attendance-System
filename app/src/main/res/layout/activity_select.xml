@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewClickHandler"
+            type="com.system.ui.select.viewmodel.SelectViewModel.ViewClickHandler" />
+
+        <variable
+            name="viewModel"
+            type="com.system.ui.select.viewmodel.SelectViewModel" />
+    </data>
+
+    <FrameLayout
+        android:id="@+id/flMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".ui.select.view.SelectActivity"
+            android:background="@drawable/background_gradient"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            >
+
+            <include
+                android:id="@+id/topbar"
+                layout="@layout/topbar" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_95sdp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_25sdp"
+                            android:orientation="vertical"
+                            android:onClick="@{(v)->viewClickHandler.onProf(v)}">
+
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="@dimen/_15sdp"
+                                app:cardElevation="@dimen/_5sdp"
+                                android:layout_margin="@dimen/_5sdp"
+                                >
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/_90sdp"
+                                    android:layout_height="@dimen/_90sdp"
+                                    android:layout_gravity="center"
+                                    android:scaleType="center"
+                                    android:src="@drawable/teacher1" />
+
+                            </androidx.cardview.widget.CardView>
+
+
+                            <TextView
+                                style="@style/txt_000_14"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="6dp"
+                                android:text="professor"
+                                android:textAlignment="center"
+                                android:gravity="center"
+                                android:textColor="@android:color/black"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_25sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="vertical"
+                            android:onClick="@{(v)->viewClickHandler.onStudent(v)}">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                app:cardCornerRadius="@dimen/_15sdp"
+                                app:cardElevation="@dimen/_5sdp"
+
+                                >
+
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/_90sdp"
+                                    android:layout_height="@dimen/_90sdp"
+                                    android:layout_gravity="center"
+                                    android:scaleType="center"
+                                    android:src="@drawable/student1" />
+
+                            </androidx.cardview.widget.CardView>
+
+
+                            <TextView
+                                style="@style/txt_000_14"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="6dp"
+                                android:text="@string/students"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@android:color/black"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+</layout>
