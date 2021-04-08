@@ -4,7 +4,9 @@ import android.app.Activity
 import android.app.Application
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.view.View
+import com.mikhaellopez.circularprogressbar.CircularProgressBar
 import com.system.R
 import com.system.apputils.Utils
 import com.system.base.viewmodel.BaseViewModel

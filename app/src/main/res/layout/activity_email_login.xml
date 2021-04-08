@@ -54,6 +54,8 @@
                 android:layout_gravity="center"
                 />
 
+
+
             <com.system.custom.CTextView
                 style="@style/txt_000_14"
                 android:layout_width="match_parent"
@@ -190,6 +192,7 @@
                     android:onClick="@{(v)->viewClickHandler.onSignup(v)}" />
 
             </LinearLayout>
+
 
             </LinearLayout>
 

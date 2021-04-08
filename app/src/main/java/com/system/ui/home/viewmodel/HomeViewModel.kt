@@ -50,7 +50,41 @@ class HomeViewModel(application: Application) : BaseViewModel(application){
 
     inner class ViewClickHandler {
 
+        fun onQr(view: View) {
+            try {
+//                var intent = Intent(mContext, QrGenrateActivity::class.java)
+//                mContext.startActivity(intent)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
 
+        fun onAttendace(view: View) {
+            try {
+//                var intent = Intent(mContext, StudentAttendanceActivity::class.java)
+//                mContext.startActivity(intent)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+
+        fun onAssignment(view: View) {
+            try {
+//                var intent = Intent(mContext, StudentActivity::class.java)
+//                mContext.startActivity(intent)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+
+        fun onProfile(view: View) {
+//            try {
+//                var intent = Intent(mContext, AboutYouActivity::class.java)
+//                mContext.startActivity(intent)
+//            } catch (e: Exception) {
+//                e.printStackTrace()
+//            }
+        }
 
 
 
