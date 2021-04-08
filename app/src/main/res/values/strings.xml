@@ -294,4 +294,17 @@
     <string name="password_validation">Password And ConfirmPassword is not Same</string>
     <string name="minimum_of_8_elements">Minimum of 8 elements</string>
 
+    <string-array name="items_spinner_add">
+        <item>Select Subject</item>
+        <item>Java</item>
+        <item>Php</item>
+        <item>.Net</item>
+    </string-array>
+
+    <string name="student_attendance">Student Attendance</string>
+    <string name="dashboard">Student Dashboard</string>
+    <string name="qr">Qr Code Genrate</string>
+    <string name="Scanqr">Scan Qr</string>
+    <string name="attendance">Attendance</string>
+
 </resources>

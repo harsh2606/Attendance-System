@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewClickHandler"
+            type="com.system.ui.scanQr.viewmodel.ScanQrViewModel.ViewClickHandler" />
+
+        <variable
+            name="viewModel"
+            type="com.system.ui.scanQr.viewmodel.ScanQrViewModel" />
+    </data>
+
+    <FrameLayout
+        android:id="@+id/flMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_gradient"
+            android:orientation="vertical"
+            tools:context=".ui.scanQr.view.ScanQrActivity">
+
+            <include
+                android:id="@+id/topbar"
+                layout="@layout/topbar" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_250sdp"
+                        android:layout_height="@dimen/_350sdp"
+                        android:src="@drawable/java"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        />
+
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+        <com.system.custom.CButtonViewB
+            android:id="@+id/btnProcess"
+            style="@style/txt_white_16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:paddingVertical="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:background="@drawable/button_gradient"
+            android:text="@string/Scanqr"
+            android:textAllCaps="false" />
+    </FrameLayout>
+</layout>
