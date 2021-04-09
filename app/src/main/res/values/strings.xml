@@ -306,5 +306,6 @@
     <string name="qr">Qr Code Genrate</string>
     <string name="Scanqr">Scan Qr</string>
     <string name="attendance">Attendance</string>
+    <string name="message_minutes">message</string>
 
 </resources>
