@@ -37,6 +37,7 @@ class HomeViewModel(application: Application) : BaseViewModel(application){
         this.binder.viewClickHandler = ViewClickHandler()
         init()
         setTimerValues()
+//        binder.porgdsdsd
     }
 
     private fun init() {
