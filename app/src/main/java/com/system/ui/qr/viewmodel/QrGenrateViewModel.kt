@@ -4,8 +4,6 @@ import android.app.Activity
 import android.app.Application
 import android.content.Context
 import android.content.Intent
-import android.graphics.BitmapFactory
-import android.net.Uri
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -15,17 +13,18 @@ import com.system.base.viewmodel.BaseViewModel
 import com.system.databinding.ActivityQrGenrateBinding
 import com.system.databinding.ActivitySignupBinding
 import com.system.interfaces.TopBarClickListener
-import java.io.File
+import com.system.ui.login.view.LoginActivity
+import com.system.validator.EmailValidator
+import com.system.validator.PasswordValidator
 import java.util.regex.Pattern
 
-class QrGenrateViewModel(application: Application) : BaseViewModel(application),
+class QrGenrateViewModel (application: Application) : BaseViewModel(application),
     AdapterView.OnItemSelectedListener {
 
     private lateinit var binder: ActivityQrGenrateBinding
     private lateinit var mContext: Context
 
-
-    fun setBinder(binder:  ActivityQrGenrateBinding) {
+    fun setBinder(binder: ActivityQrGenrateBinding) {
         this.binder = binder
         this.mContext = binder.root.context
         this.binder.viewModel = this
@@ -33,6 +32,7 @@ class QrGenrateViewModel(application: Application) : BaseViewModel(application),
         this.binder.topbar.topBarClickListener = SlideMenuClickListener()
         this.binder.topbar.isTextShow = true
         this.binder.topbar.isBackShow = true
+        this.binder.topbar.isCenterTextShow= true
         this.binder.topbar.tvTitleText.text = (mContext as Activity).getString(R.string.qr)
         init()
     }
@@ -53,7 +53,6 @@ class QrGenrateViewModel(application: Application) : BaseViewModel(application),
         } catch (e: Exception) {
             e.printStackTrace()
         }
-
     }
 
     private fun selectPosition(position: Int) {
@@ -64,14 +63,15 @@ class QrGenrateViewModel(application: Application) : BaseViewModel(application),
         }
     }
 
-    inner class ViewClickHandler {
-
-
-    }
-
     inner class SlideMenuClickListener : TopBarClickListener {
         override fun onTopBarClickListener(view: View?, value: String?) {
             Utils.hideKeyBoard(getContext(), view!!)
+            if (value.equals(getLabelText(R.string.menu))) {
+                try {
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+            }
             if (value.equals(getLabelText(R.string.back))) {
                 try {
                     (mContext as Activity).finish()
@@ -86,11 +86,19 @@ class QrGenrateViewModel(application: Application) : BaseViewModel(application),
         }
     }
 
-    override fun onNothingSelected(parent: AdapterView<*>?) {
+
+    inner class ViewClickHandler {
+
+        fun onNext(view: View) {
+
+        }
 
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+    }
+
+    override fun onNothingSelected(parent: AdapterView<*>?) {
     }
 
 

@@ -1,28 +1,18 @@
 package com.system.ui.home.viewmodel
 
 
-import android.Manifest
 import android.app.*
 import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageManager
-import android.os.CountDownTimer
-import android.provider.Settings.System.getString
 import android.view.View
-import android.widget.ProgressBar
-import android.widget.Toast
-import androidx.core.app.ActivityCompat
 import com.system.R
 import com.system.apputils.Utils
 import com.system.base.viewmodel.BaseViewModel
 import com.system.databinding.ActivityHomeBinding
 import com.system.interfaces.TopBarClickListener
-import com.system.ui.camera.VideoActivity
 import com.system.ui.qr.view.QrGenrateActivity
 import com.system.ui.studentattendace.view.StudentAttendanceActivity
 import com.system.ui.studentdashboard.view.StudentActivity
-import java.util.concurrent.TimeUnit
-import kotlin.concurrent.timer
 
 
 class HomeViewModel(application: Application) : BaseViewModel(application){
@@ -64,10 +54,14 @@ class HomeViewModel(application: Application) : BaseViewModel(application){
 
     inner class ViewClickHandler {
 
+
+
         fun onQr(view: View) {
             try {
-                var intent = Intent(mContext, QrGenrateActivity::class.java)
-                mContext.startActivity(intent)
+
+                    var intent = Intent(mContext, QrGenrateActivity::class.java)
+                    mContext.startActivity(intent)
+
             } catch (e: Exception) {
                 e.printStackTrace()
             }
@@ -92,12 +86,12 @@ class HomeViewModel(application: Application) : BaseViewModel(application){
         }
 
         fun onProfile(view: View) {
-            try {
-                var intent = Intent(mContext, VideoActivity::class.java)
-                mContext.startActivity(intent)
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
+//            try {
+//                var intent = Intent(mContext, VideoActivity::class.java)
+//                mContext.startActivity(intent)
+//            } catch (e: Exception) {
+//                e.printStackTrace()
+//            }
         }
 
 

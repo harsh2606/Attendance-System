@@ -26,6 +26,7 @@
             android:orientation="vertical"
             tools:context=".ui.qr.view.QrGenrateActivity">
 
+
             <include
                 android:id="@+id/topbar"
                 layout="@layout/topbar" />
@@ -86,13 +87,7 @@
                                 android:layout_weight="1"
                                 />
 
-                            <androidx.appcompat.widget.AppCompatImageView
-                                android:layout_width="@dimen/_12sdp"
-                                android:layout_height="@dimen/_10sdp"
-                                android:layout_gravity="center_vertical"
-                                android:layout_marginEnd="@dimen/_18sdp"
-                                android:contentDescription="@null"
-                                android:src="@drawable/ic_drop_down" />
+
 
                         </LinearLayout>
 
@@ -146,7 +141,7 @@
                         android:src="@drawable/java"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="@dimen/_20sdp"
-                       />
+                        />
 
                     <com.system.custom.CButtonViewB
                         style="@style/txt_white_16"
@@ -166,7 +161,6 @@
             </ScrollView>
 
         </LinearLayout>
-
 
         <com.system.custom.CButtonViewB
             android:id="@+id/btnProcess"

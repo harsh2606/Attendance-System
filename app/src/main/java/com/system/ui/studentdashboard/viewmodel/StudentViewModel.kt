@@ -8,11 +8,9 @@ import android.view.View
 import com.system.R
 import com.system.apputils.Utils
 import com.system.base.viewmodel.BaseViewModel
-import com.system.databinding.ActivityHomeBinding
 import com.system.databinding.ActivityStudentBinding
 import com.system.interfaces.TopBarClickListener
 import com.system.ui.attendace.view.AttendanceActivity
-import com.system.ui.qr.view.QrGenrateActivity
 import com.system.ui.scanQr.view.ScanQrActivity
 
 class StudentViewModel (application: Application) : BaseViewModel(application) {
@@ -93,12 +91,12 @@ class StudentViewModel (application: Application) : BaseViewModel(application) {
         }
 
         fun onProfile(view: View) {
-            try {
+//            try {
 //                var intent = Intent(mContext, AboutYouActivity::class.java)
 //                mContext.startActivity(intent)
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
+//            } catch (e: Exception) {
+//                e.printStackTrace()
+//            }
         }
 
     }

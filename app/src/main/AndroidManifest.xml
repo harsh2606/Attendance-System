@@ -25,7 +25,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.camera.VideoActivity"></activity>
+        <activity android:name=".ui.studentdashboard.view.StudentActivity"></activity>
+        <activity android:name=".ui.studentattendace.view.StudentAttendanceActivity" />
+        <activity android:name=".ui.qr.view.QrGenrateActivity" />
+        <activity android:name=".ui.camera.VideoActivity" />
         <activity android:name=".ui.select.view.SelectActivity" />
         <activity android:name=".ui.setting.view.SettingActivity" />
         <activity

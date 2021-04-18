@@ -1,4 +1,4 @@
-package com.system.apputils
+package com.system.base.view
 
 import android.app.Activity
 import android.app.Dialog
@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.view.Window
 import android.view.WindowManager
 import com.system.R
+import com.system.apputils.Utils
 
 
 class AsyncProgressDialog : Thread {

@@ -3,26 +3,23 @@ package com.system.ui.studentattendace.viewmodel
 import android.app.Activity
 import android.app.Application
 import android.content.Context
-import android.content.Intent
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import com.system.R
 import com.system.apputils.Utils
 import com.system.base.viewmodel.BaseViewModel
-import com.system.databinding.ActivityQrGenrateBinding
 import com.system.databinding.ActivityStudentAttendanceBinding
 import com.system.interfaces.TopBarClickListener
-import com.system.ui.home.view.HomeActivity
 
-class  StudentAttendanceViewModel(application: Application) : BaseViewModel(application),
+class StudentAttendanceViewModel (application: Application) : BaseViewModel(application),
     AdapterView.OnItemSelectedListener {
 
     private lateinit var binder: ActivityStudentAttendanceBinding
     private lateinit var mContext: Context
 
 
-    fun setBinder(binder:  ActivityStudentAttendanceBinding) {
+    fun setBinder(binder: ActivityStudentAttendanceBinding) {
         this.binder = binder
         this.mContext = binder.root.context
         this.binder.viewModel = this

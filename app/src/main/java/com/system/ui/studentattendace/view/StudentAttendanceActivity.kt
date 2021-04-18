@@ -8,9 +8,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.system.R
 import com.system.base.view.BaseActivity
-import com.system.databinding.ActivityQrGenrateBinding
+import com.system.databinding.ActivityHomeBinding
 import com.system.databinding.ActivityStudentAttendanceBinding
-import com.system.ui.qr.viewmodel.QrGenrateViewModel
+import com.system.ui.home.viewmodel.HomeViewModel
 import com.system.ui.studentattendace.viewmodel.StudentAttendanceViewModel
 
 class StudentAttendanceActivity : BaseActivity() {
